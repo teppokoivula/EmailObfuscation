@@ -318,7 +318,7 @@ class EmailObfuscation extends WireData implements Module, ConfigurableModule
 			'<inpu' => "((?:<input).*(?:>))",
 			'value' => "((?:value=['\"]).*(?:['\"]))",
 			'label' => "((?:label=['\"]).*(?:['\"]))",
-			'href=' => "((?:href=['\"](?!mailto:)(?:[a-z]+:|\/|#)).*(?:['\"]))",
+			'href=' => "((?:href=['\"](?!mailto:)(?:[a-z]+:|\/|\\#)).*(?:['\"]))",
 			'data-' => "((?:data-[A-Z0-9.-]+=['\"]).*(?:['\"]))",
 		);
 
