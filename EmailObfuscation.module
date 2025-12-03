@@ -441,7 +441,7 @@ class EmailObfuscation extends WireData implements Module, ConfigurableModule
 				$data = array();
 				foreach($this->options as $key => $val) $data[$key] = $this->$key;
 				$data = array_merge($this->debugData, $data);
-				$this->debugTime += Debug::timer($time);
+				$this->debugTime += (int) Debug::timer($time);
 				$output .= "\n<!-- \n\n\t" . $info['title'] . " v.{$info['version']}";
 				$output .= "\n\n\tCrypted {$this->addrCount} email address in {$this->debugTime} seconds\n\n";
 				$output .= json_encode($data, JSON_PRETTY_PRINT);
